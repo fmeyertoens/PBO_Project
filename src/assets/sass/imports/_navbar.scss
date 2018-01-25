@@ -4,18 +4,24 @@
   flex-direction: column;
   height: 100vh;
   width: $navbar-width;
+
+  .navbar-light & .active>.nav-link {
+    color: $color-main;    
+  }
 }
+
 .navbar {
   position: fixed;
-
+  
   .navbar-collapse {
     position: absolute;
     top: 0;
     left: 0;
     transition: left .5s ease;
+    z-index: 10;
   }
 
-  li {
+  .nav-item {
     display: inline-block;
     margin: 5px 0 5px 20px;
   }

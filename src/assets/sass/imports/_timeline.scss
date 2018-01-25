@@ -1,0 +1,126 @@
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 80%;
+  height: 100%;
+
+  /* horizontale Linie */
+  &::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: $color-white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+}
+
+.popup {
+  background-color: inherit;
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+
+/* Kreise */
+  &:after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: $color-white;
+    border: 4px solid $color-main;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+.popup-left {
+  left: 0;
+}
+
+.popup-right {
+  left: 50%;
+}
+
+/* Ecken */
+.popup-left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid $color-white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent $color-white;
+}
+
+.popup-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid $color-white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent $color-white transparent transparent;
+}
+
+
+.popup-right::after {
+  left: -12px;
+}
+
+.popup-content {
+  background-color: $color-white;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  border-radius: 6px;
+  padding: 20px 30px;
+  position: relative;
+
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media all and (max-width: 991.98px) {
+  .timeline {
+    max-width: 100%;
+  }
+
+/* Timeline auf der linken Seite */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* volle Breite des Container */
+  .popup {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Ecken links */
+  .popup::before {
+    left: 60px;
+    border: medium solid $color-white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent $color-white transparent transparent;
+  }
+
+  .popup-left::after, .popup-right::after {
+    left: 18px;
+  }
+
+  .popup-right {
+    left: 0%;
+  }
+}

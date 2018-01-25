@@ -1,5 +1,11 @@
 .main-content {
   background-color: $color-background-content;
-  padding-left: $navbar-width;
+  padding: 40px 40px 40px $navbar-width+40px;
   height: 100vh;
+}
+
+@media all and (max-width: 991.98px) {
+ .main-content {
+    padding: 10px;
+ }
 }
