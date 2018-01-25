@@ -8,6 +8,7 @@ import { ProcessComponent } from './process/process.component';
 import { StakeholderComponent } from './stakeholder/stakeholder.component';
 import { LocationComponent } from './location/location.component';
 import { ListProcessComponent } from './process/list-process/list-process.component';
+import { DetailProcessComponent } from './process/detail-process/detail-process.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListProcessComponent } from './process/list-process/list-process.compon
     ProcessComponent,
     StakeholderComponent,
     LocationComponent,
-    ListProcessComponent
+    ListProcessComponent,
+    DetailProcessComponent
   ],
   imports: [
     BrowserModule
