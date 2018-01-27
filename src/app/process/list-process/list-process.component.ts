@@ -10,22 +10,14 @@ import { Process } from '../process';
 })
 export class ListProcessComponent implements OnInit {
   tablehead = ['Bezeichnung', 'Prozessort', 'Prozessinitiator'];
-  // tabledata = ProcessMock;
   selectedProcess: Process;
-  tabledata: Process[]; // Array von Service
+  tabledata: Process[];
 
   getProcess(): void {
     this.processService.getProcess()
       .subscribe(process => this.tabledata = process);
-    // suscribe wartet auf die Antwort/ Heros des Server
   }
 
-  // onSelect(hero: Hero): void {
-  //   console.log('klick');
-  //   this.selectedHero = hero;
-  // }
-
-  // private, weil ich die var. des Service im Template nicht verwende
   constructor(private processService: ProcessService) { }
 
   ngOnInit() {

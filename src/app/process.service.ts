@@ -6,10 +6,6 @@ import { Process } from './process/process';
 
 @Injectable()
 export class ProcessService {
-  /* // old
-  getHeroes(): Hero[] {
-    return HEROES;
-  }*/
   getProcess(): Observable<Process[]> {
     return of(ProcessMock);
   }
