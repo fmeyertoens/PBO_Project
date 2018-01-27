@@ -9,6 +9,8 @@ import { StakeholderComponent } from './stakeholder/stakeholder.component';
 import { LocationComponent } from './location/location.component';
 import { ListProcessComponent } from './process/list-process/list-process.component';
 import { DetailProcessComponent } from './process/detail-process/detail-process.component';
+import { ProcessService } from './process.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,10 @@ import { DetailProcessComponent } from './process/detail-process/detail-process.
     DetailProcessComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [ProcessService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
