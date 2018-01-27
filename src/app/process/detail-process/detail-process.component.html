@@ -1,38 +1,15 @@
-<div class="timeline">
+<div class="timeline" *ngIf="process">
   <div class="popup popup-left">
     <div class="popup-content">
-      <h2>2017</h2>
-      <p>Lorem ipsum..</p>
+      <h2>Bezeichnung</h2>
+      <p>{{process.name}}</p>
     </div>
   </div>
   <div class="popup popup-right">
     <div class="popup-content">
-      <h2>2016</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="popup popup-left">
-    <div class="popup-content">
-      <h2>2017</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="popup popup-right">
-    <div class="popup-content">
-      <h2>2016</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="popup popup-left">
-    <div class="popup-content">
-      <h2>2017</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="popup popup-right">
-    <div class="popup-content">
-      <h2>2016</h2>
-      <p>Lorem ipsum..</p>
+      <h2>Prozessort</h2>
+      <p>{{process.location}}</p>
     </div>
   </div>
 </div>
+<button (click)="goBack()" class="btn btn-info back">zurück</button>
