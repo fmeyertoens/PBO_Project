@@ -1,6 +1,5 @@
 import { ProcessService } from './../../process.service';
 import { Component, OnInit } from '@angular/core';
-import { ProcessMock } from '../mock-process';
 import { Process } from '../process';
 
 @Component({
@@ -14,8 +13,9 @@ export class ListProcessComponent implements OnInit {
   tabledata: Process[];
 
   getProcess(): void {
-    this.processService.getProcess()
-      .subscribe(process => this.tabledata = process);
+    // this.processService.getProcess()
+    //   .subscribe(process => this.tabledata = process);
+    this.processService.getAll().subscribe(process => this.tabledata = process);
   }
 
   constructor(private processService: ProcessService) { }
