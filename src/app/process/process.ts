@@ -4,6 +4,8 @@ export class Process {
   public name: string,
   public location: string,
   public initiator: string,
+  public description: string,
+  public participation: string,
+  public parent: string,
   ) {}
 }
-

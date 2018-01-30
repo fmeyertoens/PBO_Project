@@ -13,9 +13,10 @@ export class ListProcessComponent implements OnInit {
   tabledata: Process[];
 
   getProcess(): void {
-    // this.processService.getProcess()
-    //   .subscribe(process => this.tabledata = process);
-    this.processService.getAll().subscribe(process => this.tabledata = process);
+    this.processService.getProcess()
+      .subscribe(process => this.tabledata = process);
+    // this.processService.getAll().subscribe(process => this.tabledata = process);
+    // console.log(this.tabledata);
   }
 
   constructor(private processService: ProcessService) { }
