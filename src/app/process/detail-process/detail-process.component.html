@@ -1,0 +1,45 @@
+<div class="timeline" *ngIf="process">
+  <div class="popup popup-left">
+    <i class="fa fa-info" aria-hidden="true"></i>
+    <div class="popup-content">
+      <h2>Bezeichnung</h2>
+      <p>{{process.name}}</p>
+    </div>
+  </div>
+  <div class="popup popup-right">
+    <i class="fa fa-map-marker" aria-hidden="true"></i>
+    <div class="popup-content">
+      <h2>Prozessort</h2>
+      <p>{{process.location}}</p>
+    </div>
+  </div>
+  <div class="popup popup-left">
+    <i class="fa fa-user" id="person" aria-hidden="true"></i>
+    <div class="popup-content">
+      <h2>Projektinitiator</h2>
+      <p>{{process.initiator}}</p>
+    </div>
+  </div>
+  <div class="popup popup-right">
+   <i class="fa fa-info" id="beschreibung" aria-hidden="true"></i>
+    <div class="popup-content">
+      <h2>Prozessbeschreibung</h2>
+      <p>{{process.description}}</p>
+    </div>
+  </div>
+  <div class="popup popup-left">
+    <i class="fa fa-users" id="persons" aria-hidden="true"></i>
+    <div class="popup-content">
+      <h2>Projektbeteilgung</h2>
+      <p>{{process.participation}}</p>
+    </div>
+  </div>
+  <div class="popup popup-right">
+    <i class="fa fa-arrow-up" id="parent" aria-hidden="true"></i>
+    <div class="popup-content">
+      <h2>übergeordneter Prozess</h2>
+      <p>{{process.parent}}</p>
+    </div>
+  </div>
+</div>
+<button (click)="goBack()" class="btn btn-info back">zurück</button>
