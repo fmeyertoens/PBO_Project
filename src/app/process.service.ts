@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { ProcessMock } from './process/mock-process';
 import { Process } from './process/process';
-import { ModifyRestdata } from './shared/modify-restdata';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/retry';
@@ -28,29 +26,17 @@ export class ProcessService {
       .catch(this.errorHandler);
   }
 
-
   getProcessById(id: number): Observable<any> {
     return this.http
       .get('../assets/process.json')
       .retry(3)
       .catch(this.errorHandler)
       .map((json) => json.process)
-      .map((process: Process[]) => process.find(childs => childs.id === id)
-      // .pipe(
-      //   tap(process => console.log(process))
-      );
+      .map((process: Process[]) => process.find(childs => childs.id === id));
   }
 
    private errorHandler(error: Error | any): Observable<any> {
      return Observable.throw(error);
    }
-
-  getProcess(): Observable<Process[]> {
-    return of(ProcessMock);
-  }
-
-  getSingleProcess(id: number): Observable<Process> {
-    return of(ProcessMock.find(process => process.id === id));
-  }
 
 }
