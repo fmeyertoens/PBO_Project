@@ -20,8 +20,13 @@ export class DetailProcessComponent implements OnInit {
 
   getProcessDetail(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.processService.getSingleProcess(id)
-      .subscribe(process => this.process = process);
+    // this.processService.getProcessById(id
+    this.processService.getAll()
+      .subscribe(json => {
+        console.log(json);
+        this.process = json.process.childs.find(process => parseInt(process.id, null) === id);
+        console.log('ergebnis: ' + json.process.childs[0].id);
+      });
   }
 
   goBack(): void {

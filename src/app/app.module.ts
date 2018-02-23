@@ -10,6 +10,10 @@ import { ListProcessComponent } from './process/list-process/list-process.compon
 import { DetailProcessComponent } from './process/detail-process/detail-process.component';
 import { ProcessService } from './process.service';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CdkTableModule } from '@angular/cdk/table';
+import {MatSortModule} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    CdkTableModule,
+    MatSortModule,
+    HttpClientModule
   ],
   providers: [ProcessService],
   bootstrap: [AppComponent]
