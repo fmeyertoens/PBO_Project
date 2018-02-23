@@ -8,4 +8,3 @@ Die gesamte Applikation ist responsive.
 *Entwickler:* Fabian Meyertöns, Florian Fricke (Studiengang: Wirtschaftsinformatik)
 
 **Live Preview**: https://zzmibzw.github.stackblitz.io
-**Link mit Codeeditor:** https://stackblitz.com/github/florianfricke/PBO_Project
