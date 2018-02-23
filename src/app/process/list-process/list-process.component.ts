@@ -1,4 +1,4 @@
-import { FilterPipe } from './../../shared/filter.pipe';
+import { FilterPipeProcess } from './../../shared/filter_process.pipe';
 import { ProcessService } from './../../process.service';
 import { Component, OnInit } from '@angular/core';
 import { Process } from '../process';
@@ -10,7 +10,6 @@ import { Sort } from '@angular/material';
   styleUrls: ['./list-process.component.scss']
 })
 export class ListProcessComponent implements OnInit {
-  selectedProcess: Process;
   tabledata: Process[];
   sortedData;
   numberOfProcess: number;
@@ -18,7 +17,6 @@ export class ListProcessComponent implements OnInit {
   page = 1;
 
   getProcess(): void {
-    // this.processService.getProcess()
     this.processService.getAll()
       .subscribe(json => {
         this.tabledata = json.process.childs;
@@ -26,17 +24,12 @@ export class ListProcessComponent implements OnInit {
         this.numberOfProcess = this.tabledata.length;
         this.limit = this.tabledata.length;
       });
-    // this.processService.getAll().subscribe(process => this.tabledata = process);
-    // console.log(this.tabledata);
   }
 
   constructor(private processService: ProcessService) { }
 
   ngOnInit() {
     this.getProcess();
-    // this.sortedData = this.tabledata;
-    // this.numberOfProcess = this.tabledata.length;
-    // this.limit = this.tabledata.length;
   }
 
   sortData(sort: Sort) {

@@ -40,7 +40,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let process of sortedData | filter : searchText  | slice:(page-1)*limit:page*limit" routerLink="/detail/{{process.id}}">
+          <tr *ngFor="let process of sortedData | filterprocess : searchText  | slice:(page-1)*limit:page*limit" routerLink="/detail/{{process.id}}">
             <td>{{process.name}}</td>
             <td>{{process.location}}</td>
             <td>{{process.initiator}}</td>

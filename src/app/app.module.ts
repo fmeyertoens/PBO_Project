@@ -1,4 +1,5 @@
-import { FilterPipe } from './shared/filter.pipe';
+import { FilterPipeProcess } from './shared/filter_process.pipe';
+import { FilterPipeStakeholder } from './shared/filter_stakeholder.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -14,14 +15,16 @@ import { ProcessService } from './process.service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CdkTableModule } from '@angular/cdk/table';
-import {MatSortModule} from '@angular/material';
+import { MatSortModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { ListStakeholderComponent } from './stakeholder/list-stakeholder/list-stakeholder.component';
 
 @NgModule({
   exports: [
     CdkTableModule,
     MatSortModule,
-    FilterPipe,
+    FilterPipeProcess,
+    FilterPipeStakeholder,
   ],
   declarations: [
     AppComponent,
@@ -31,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     LocationComponent,
     ListProcessComponent,
     DetailProcessComponent,
-    FilterPipe,
+    FilterPipeProcess,
+    FilterPipeStakeholder,
+    ListStakeholderComponent,
   ],
   imports: [
     BrowserModule,
