@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CdkTableModule } from '@angular/cdk/table';
 import {MatSortModule} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   exports: [
@@ -40,6 +41,7 @@ import {MatSortModule} from '@angular/material';
     BrowserAnimationsModule,
     CdkTableModule,
     MatSortModule,
+    HttpClientModule
   ],
   providers: [ProcessService],
   bootstrap: [AppComponent]

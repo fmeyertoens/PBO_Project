@@ -18,8 +18,14 @@ export class ListProcessComponent implements OnInit {
   page = 1;
 
   getProcess(): void {
-    this.processService.getProcess()
-      .subscribe(process => this.tabledata = process);
+    // this.processService.getProcess()
+    this.processService.getAll()
+      .subscribe(json => {
+        this.tabledata = json.process.childs;
+        this.sortedData = this.tabledata;
+        this.numberOfProcess = this.tabledata.length;
+        this.limit = this.tabledata.length;
+      });
     // this.processService.getAll().subscribe(process => this.tabledata = process);
     // console.log(this.tabledata);
   }
@@ -28,9 +34,9 @@ export class ListProcessComponent implements OnInit {
 
   ngOnInit() {
     this.getProcess();
-    this.sortedData = this.tabledata;
-    this.numberOfProcess = this.tabledata.length;
-    this.limit = this.tabledata.length;
+    // this.sortedData = this.tabledata;
+    // this.numberOfProcess = this.tabledata.length;
+    // this.limit = this.tabledata.length;
   }
 
   sortData(sort: Sort) {
