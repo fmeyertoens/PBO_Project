@@ -6,11 +6,3 @@
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: $color-table;
 }
-
-.cdk-visually-hidden {
-  display: none;
-}
-
-.mat-sort-header-arrow {
-  margin: 5px 0 0 6px !important;
-}
