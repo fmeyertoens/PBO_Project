@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { Process } from './process/process';
 import { ProcessLocation } from './location/location';
-import { ModifyRestdata } from './shared/modify-restdata';
+// import { ModifyRestdata } from './shared/modify-restdata';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/retry';
@@ -63,12 +63,12 @@ export class ProcessService {
      return Observable.throw(error);
    }
 
-  getProcess(): Observable<Process[]> {
-    return of(ProcessMock);
-  }
+  // getProcess(): Observable<Process[]> {
+  //   return of(ProcessMock);
+  // }
 
-  getSingleProcess(id: number): Observable<Process> {
-    return of(ProcessMock.find(process => parseInt(process.id, null) === id));
-  }
+  // getSingleProcess(id: number): Observable<Process> {
+  //   return of(ProcessMock.find(process => parseInt(process.id, null) === id));
+  // }
 
 }
