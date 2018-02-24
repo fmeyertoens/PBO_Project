@@ -1,4 +1,5 @@
 import { FilterPipeProcess } from './../../shared/filter_process.pipe';
+import { ProcessLocation } from './../../location/location';
 import { ProcessService } from './../../process.service';
 import { Component, OnInit } from '@angular/core';
 import { Process } from '../process';
@@ -15,14 +16,24 @@ export class ListProcessComponent implements OnInit {
   numberOfProcess: number;
   limit: number;
   page = 1;
+  locations: ProcessLocation[];
 
   getProcess(): void {
     this.processService.getAll()
       .subscribe(json => {
         this.tabledata = json.process.childs;
+        this.processService.getLocations()
+          .subscribe(locations => {
+            this.locations = locations;
+            this.tabledata.forEach(element => {
+              element.location = locations.find(loc =>  element.location.toString().localeCompare(loc.id) === 0).city;
+            });
+          });
+
         this.sortedData = this.tabledata;
         this.numberOfProcess = this.tabledata.length;
         this.limit = this.tabledata.length;
+
       });
   }
 
