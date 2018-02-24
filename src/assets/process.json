@@ -2204,8 +2204,8 @@
           "city": "Mittelstadt",
           "room (optional)": "",
           "geoCoords (optional)": {
-            "lat": "",
-            "lng": ""
+            "lat": "51",
+            "lng": "13.7"
           }
         },
         {
@@ -2215,8 +2215,8 @@
           "city": "Diverse",
           "room (optional)": "",
           "geoCoords (optional)": {
-            "lat": "",
-            "lng": ""
+            "lat": "53",
+            "lng": "10"
           }
         },
         {
@@ -2226,30 +2226,30 @@
           "city": "Planerbüro",
           "room (optional)": "",
           "geoCoords (optional)": {
-            "lat": "",
-            "lng": ""
+            "lat": "51",
+            "lng": "7"
           }
         },
         {
-          "id": "https://process.stadt.de/location/3",
+          "id": "https://process.stadt.de/location/4",
           "address": "",
           "zip": "",
           "city": "Fachplanerbüro",
           "room (optional)": "",
           "geoCoords (optional)": {
-            "lat": "",
-            "lng": ""
+            "lat": "53",
+            "lng": "13"
           }
         },
         {
-          "id": "https://process.stadt.de/location/3",
+          "id": "https://process.stadt.de/location/5",
           "address": "",
           "zip": "",
           "city": "Landratsamt",
           "room (optional)": "",
           "geoCoords (optional)": {
-            "lat": "",
-            "lng": ""
+            "lat": "47",
+            "lng": "11"
           }
         }
       ],
