@@ -1,3 +1,4 @@
+import { ProcessLocation } from './../../location/location';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -21,12 +22,22 @@ export class DetailProcessComponent implements OnInit {
   getProcessDetail(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     // this.processService.getProcessById(id
-    this.processService.getAll()
-      .subscribe(json => {
-        console.log(json);
-        this.process = json.process.childs.find(process => parseInt(process.id, null) === id);
-        console.log('ergebnis: ' + json.process.childs[0].id);
-      });
+    // this.processService.getAll()
+    //   .subscribe(json => {
+    //     console.log(json);
+    //     this.process = json.process.childs.find(process => parseInt(process.id, null) === id);
+    //     console.log('ergebnis: ' + json.process.childs[0].id);
+    //   });
+    this.processService.getProcessById(id)
+      .subscribe((process: Process) => {
+        // console.log(process);
+        this.process = process;
+        this.processService.getLocationById(this.process.location)
+          .subscribe((location: ProcessLocation) => {
+            this.process.location = location.city;
+          });
+      }
+    );
   }
 
   goBack(): void {

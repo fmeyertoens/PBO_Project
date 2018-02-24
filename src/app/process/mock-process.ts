@@ -2,7 +2,7 @@ import { Process } from './process';
 
 export const ProcessMock: Process[] = [
   new Process (
-    1,
+    '1',
      'Prozess1',
      'Dresden',
      'Prof. Freitag',
@@ -11,7 +11,7 @@ export const ProcessMock: Process[] = [
       'Prozess 0',
     ),
   new Process(
-    2,
+    '2',
     'Prozess2',
     'Leipzig',
     'Prof. Sonntag',
@@ -20,7 +20,7 @@ export const ProcessMock: Process[] = [
       'Prozess 0',
   ),
   new Process(
-    3,
+    '3',
     'Prozess3',
     'Chemnitz',
     'Prof. Montag',
@@ -29,7 +29,7 @@ export const ProcessMock: Process[] = [
       'Prozess 0',
   ),
   new Process(
-    4,
+    '4',
     'Prozess4',
     'Freiberg',
     'Prof. Mittwoch',
@@ -38,7 +38,7 @@ export const ProcessMock: Process[] = [
       'Prozess 0',
   ),
   new Process(
-    5,
+    '5',
     'Prozess5',
     'Flöha',
     'Prof. Donnerstag',
@@ -47,7 +47,7 @@ export const ProcessMock: Process[] = [
       'Prozess 0',
   ),
   new Process(
-    9,
+    '9',
     'Prozess6',
     'Dresden',
     'Prof. Freitag',
