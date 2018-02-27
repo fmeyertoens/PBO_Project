@@ -1,6 +1,7 @@
 import { ProcessService } from './../process.service';
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
+import { event as currentEvent } from 'd3';
 import * as topojson from 'topojson';
 import { ProcessLocation } from './location';
 
@@ -65,7 +66,7 @@ export class LocationComponent implements OnInit {
           })
           .attr('r', 5)
           .on('mouseover', function(d) {
-            const ev = d3.event;
+            const ev = currentEvent;
             div.transition()
               .duration(200)
               .style('opacity', .8);
