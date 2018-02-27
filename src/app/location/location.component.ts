@@ -1,7 +1,7 @@
 import { ProcessService } from './../process.service';
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
-import { event as currentEvent } from 'd3';
+import { event as currentEvent } from 'd3-selection';
 import * as topojson from 'topojson';
 import { ProcessLocation } from './location';
 
