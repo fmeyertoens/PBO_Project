@@ -65,12 +65,13 @@ export class LocationComponent implements OnInit {
           })
           .attr('r', 5)
           .on('mouseover', function(d) {
+            const ev = d3.event;
             div.transition()
               .duration(200)
               .style('opacity', .8);
             div.html(d.city)
-              .style('left', (d3.event.pageX) + 'px')
-              .style('top', (d3.event.pageY - 28) + 'px');
+              .style('left', (ev.pageX) + 'px')
+              .style('top', (ev.pageY - 28) + 'px');
           })
           .on('mouseout', function (d) {
             div.transition()
