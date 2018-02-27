@@ -3,3 +3,10 @@ path {
   stroke-width: 0.25px;
   fill: lightblue;
 }
+
+div.tooltip {
+  position: absolute;
+  padding: 2px;
+  border-radius: 2px;
+  background: lightgrey;
+}

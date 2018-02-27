@@ -28,6 +28,11 @@ export class LocationComponent implements OnInit {
         // .rotate([0, 0])
         ;
       // console.log(d3.select('map'));
+
+      const div = d3.select('map').append('div')
+              .attr('class', 'tooltip')
+              .style('opacity', 0);
+
       const svg = d3.select('map').append('svg')
               .attr('width', width)
               .attr('height', height);
@@ -59,6 +64,19 @@ export class LocationComponent implements OnInit {
             return projection([d['geoCoords (optional)'].lng, d['geoCoords (optional)'].lat])[1];
           })
           .attr('r', 5)
+          .on('mouseover', function(d) {
+            div.transition()
+              .duration(200)
+              .style('opacity', .8);
+            div.html(d.city)
+              .style('left', (d3.event.pageX) + 'px')
+              .style('top', (d3.event.pageY - 28) + 'px');
+          })
+          .on('mouseout', function (d) {
+            div.transition()
+              .duration(500)
+              .style('opacity', 0);
+          })
           .style('fill', 'red');
       });
 
