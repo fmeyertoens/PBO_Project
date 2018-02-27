@@ -37,13 +37,13 @@ export class LocationComponent implements OnInit {
 
       const g = svg.append('g');
 
-      d3.json('../../assets/world-110m2.json', function(error, topology) {
+      d3.json('../../assets/world-110m2.json').then(function (topology) {
         // if (error) {
         //   throw error;
         // }
 
         g.selectAll('path')
-          .data(topojson.feature(topology, topology.objects.countries).features)
+          .data(topojson.feature(topology, (topology as any).objects.countries).features)
           .enter()
             .append('path')
             .attr('d', path);
