@@ -120,9 +120,10 @@
   }
 }
 
-@media all and (max-width: 991.98px) {
+@media all and (max-width: 1320px) {
   .timeline {
     max-width: 100%;
+    margin-bottom: 20px;
   }
 
 /* Timeline auf der linken Seite */
@@ -135,6 +136,19 @@
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
+    
+    .fa {
+      right: 0;
+      left: 28px;
+    } 
+
+    #person {
+      left: 22px;
+    }
+
+    #persons {
+      left: 19px;
+    }
   }
 
 /* Ecken links */
@@ -146,10 +160,22 @@
   }
 
   .popup-left::after, .popup-right::after {
-    left: 18px;
+    left: 11px;
   }
 
   .popup-right {
     left: 0%;
+
+    .fa {
+      left: 25px;
+    }
+
+    #beschreibung {
+      left: 27px;
+    }
+
+    #parent {
+      left: 21px;
+    }
   }
 }

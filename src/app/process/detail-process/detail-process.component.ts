@@ -24,9 +24,7 @@ export class DetailProcessComponent implements OnInit {
     // this.processService.getProcessById(id
     // this.processService.getAll()
     //   .subscribe(json => {
-    //     console.log(json);
     //     this.process = json.process.childs.find(process => parseInt(process.id, null) === id);
-    //     console.log('ergebnis: ' + json.process.childs[0].id);
     //   });
     this.processService.getProcessById(id)
       .subscribe((process: Process) => {

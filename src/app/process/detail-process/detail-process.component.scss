@@ -3,3 +3,13 @@
   left: 30px;
   bottom: 30px;
 }
+
+
+@media (max-width: 991.98px) {
+  .btn-back {
+    position: static;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+}
+
