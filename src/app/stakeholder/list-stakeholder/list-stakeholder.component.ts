@@ -16,6 +16,7 @@ export class ListStakeholderComponent implements OnInit {
   numberOfStakeholder: number;
   limit: number;
   page = 1;
+  searchText: string;
 
   getStakeholder(): void {
     this.processService.getAll()
@@ -32,7 +33,7 @@ export class ListStakeholderComponent implements OnInit {
   ngOnInit() {
     this.getStakeholder();
   }
-  
+
   sortData(sort: Sort) {
     const data = this.tabledata;
     if (!sort.active || sort.direction === '') {

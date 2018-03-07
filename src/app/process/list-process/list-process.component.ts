@@ -17,6 +17,7 @@ export class ListProcessComponent implements OnInit {
   limit: number;
   page = 1;
   locations: ProcessLocation[];
+  searchText: string;
 
   getProcess(): void {
     this.processService.getAll()
