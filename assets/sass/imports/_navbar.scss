@@ -1,0 +1,104 @@
+.navbar-nav {
+  background-color: $color-white;
+  box-shadow: inset -1px 0px 0px 0px #DDDDDD;
+  flex-direction: column;
+  height: 100vh;
+  width: $navbar-width;
+
+  .navbar-light & .active>.nav-link {
+    color: $color-main;    
+  }
+}
+
+.navbar {
+  position: fixed;
+  
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: left .5s ease;
+    z-index: 10;
+  }
+
+  .nav-item {
+    display: inline-block;
+    margin: 5px 0 5px 20px;
+  }
+
+  a {
+    color: $color-text;
+    font-size: 19px;
+    position: relative;
+
+    &:hover {
+      color: $color-black;
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      transform: translate(0,-50%);
+      left: 65px;
+    }
+  }
+
+  .fa {
+    font-size: 30px;
+    margin-right: 24px;
+  }
+
+  .navbar-brand {
+    border-bottom: 1px solid $border-color;
+    font-size: 24px;
+    margin-right: 0;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+  }
+
+  .collapsing {
+    height: 100vh;
+    left: -$navbar-width;
+    transition: left .5s ease;
+  }  
+  
+  button[aria-expanded="false"]{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  button[aria-expanded="true"]{
+    background-color: #fff;
+    border-radius: 0;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    border-left: 0;
+    border-top: 0;
+    left: $navbar-width;
+    padding: 18px;
+    position: absolute;
+    transition: left .7s ease;
+    top: 0;
+  }
+
+}
+
+.nav-link {
+  padding: .7rem 1rem;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    background-color: $color-background-content;
+    height: 70px;
+    position: relative;
+  }
+}
+
