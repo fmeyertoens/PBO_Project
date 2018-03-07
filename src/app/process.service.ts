@@ -22,7 +22,7 @@ export class ProcessService {
 
   getAll(): Observable<any> {
     return this.http
-      .get('../assets/process.json')
+      .get('/assets/process.json')
       // .pipe(((process => console.log(process)))
       .retry(3)
       .catch(this.errorHandler);
@@ -31,7 +31,7 @@ export class ProcessService {
 
   getProcessById(id: number): Observable<Process> {
     return this.http
-      .get('../assets/process.json')
+      .get('/assets/process.json')
       .retry(3)
       .catch(this.errorHandler)
       .map((json) => json.process.childs)
@@ -43,7 +43,7 @@ export class ProcessService {
 
   getLocations(): Observable<ProcessLocation[]> {
     return this.http
-      .get('../assets/process.json')
+      .get('/assets/process.json')
       .retry(3)
       .catch(this.errorHandler)
       .map((json) => json.process.locations);
@@ -51,7 +51,7 @@ export class ProcessService {
 
   getLocationById(id: String): Observable<ProcessLocation> {
     return this.http
-      .get('../assets/process.json')
+      .get('/assets/process.json')
       .retry(3)
       .catch(this.errorHandler)
       .map((json) => json.process.locations)
